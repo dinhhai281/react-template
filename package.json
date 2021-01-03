@@ -1,6 +1,6 @@
 {
   "name": "react-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Template for react app",
   "main": "index.js",
   "author": "Hai Nguyen <dinhhai281@gmail.com>",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
+    "@loadable/component": "^5.14.1",
     "@reduxjs/toolkit": "^1.5.0",
     "axios": "^0.21.0",
     "react": "^17.0.1",
@@ -33,6 +34,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@types/axios": "^0.14.0",
+    "@types/loadable__component": "^5.13.1",
     "@types/node": "^14.14.10",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",

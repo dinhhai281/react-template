@@ -1,16 +1,17 @@
 import { RouteConfig, RouterOutlet } from '@components/RouterOutlet';
-import React, { FC, lazy } from 'react';
+import React, { FC } from 'react';
+import loadable from '@loadable/component';
 import { Link } from 'react-router-dom';
 
 const routes: RouteConfig[] = [
   {
     path: '/posts',
-    component: lazy(() => import('@app/features/post')),
+    component: loadable(() => import('@app/features/post')),
     exact: true,
   },
   {
     path: '/users',
-    component: lazy(() => import('@app/features/user')),
+    component: loadable(() => import('@app/features/user')),
     exact: true,
   },
 ];
