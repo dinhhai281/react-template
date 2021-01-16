@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["./src/*"],
+      "@components/*": ["./src/components/*"]
+    },
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "types": [
+      "jest",
+      "snowpack-env"
+    ]
+  },
+  "include": [
+    "src",
+    "types"
+  ]
+}

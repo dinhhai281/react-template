@@ -1,0 +1,14 @@
+const defaultConfig = require('@snowpack/app-scripts-react/jest.config.js')();
+const { compilerOptions } = require('./tsconfig');
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+
+
+module.exports = {
+  ...defaultConfig,
+  moduleNameMapper: {
+    '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/__mocks__/file-mock.js`,
+    ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>'}),
+  },
+  setupFilesAfterEnv: ["<rootDir>/jest-setup.ts"]
+}
